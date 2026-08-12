@@ -1,7 +1,11 @@
+# Standard library
 import asyncio
 import time
 
+# Third-party libraries
 from loguru import logger
+
+# Local imports
 
 
 class SynchronousExecution:
@@ -82,15 +86,17 @@ class AsynchronousExecution:
         )
 
 
-async def main() -> None: 
-    tasks_durations = [2, 2, 1] 
-    # ================= SYNCHRONOUS ================= # 
-    logger.info("Testing Question one part_1") 
-    synchronous_executer = SynchronousExecution() 
-    synchronous_executer.run_multiple(tasks_durations) 
+async def main() -> None:
+    tasks_durations = [2, 2, 1]
+    # ================= SYNCHRONOUS ================= #
+    logger.info("Testing Question one part_1")
+    synchronous_executer = SynchronousExecution()
+    synchronous_executer.run_multiple(tasks_durations)
     # ================= ASYNCHRONOUS ================= #
-    logger.info("Testing Question one part_2") 
-    asynchronous_executer = AsynchronousExecution() 
-    await asynchronous_executer.run_multiple(tasks_durations) 
-if __name__ == "__main__": 
-        asyncio.run(main())
+    logger.info("Testing Question one part_2")
+    asynchronous_executer = AsynchronousExecution()
+    await asynchronous_executer.run_multiple(tasks_durations)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

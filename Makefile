@@ -38,6 +38,10 @@ assignment_1:
 	python -m src.assignment2_fastapi.part_1.part_1_trace
 	python -m src.assignment2_fastapi.part_1.part_1_debug
     python -m src.assignment2_fastapi.part_1.part_1_write
+
+	python -m src.assignment2_fastapi.part_2.part_2_debug
+
+
 # Remove Python cache files
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +

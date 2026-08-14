@@ -32,6 +32,12 @@ assignment_1:
 	python -m src.assignment1_async_dataclass_pydantic.part_4
 	python -m src.assignment1_async_dataclass_pydantic.part_5
 	python -m src.assignment1_async_dataclass_pydantic.part_5_2
+
+# Run individual assignment_2 components
+assignment_1:
+	python -m src.assignment2_fastapi.part_1.part_1_trace
+	python -m src.assignment2_fastapi.part_1.part_1_debug
+    python -m src.assignment2_fastapi.part_1.part_1_write
 # Remove Python cache files
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +

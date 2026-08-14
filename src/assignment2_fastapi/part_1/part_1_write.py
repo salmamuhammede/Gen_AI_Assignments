@@ -59,15 +59,12 @@ def main():
             "text": "Hi",
             "model": "claude-3",
         },
-        "Case 4": {
-            "text": "Hi",
-            "max_tokens":100
-        },
+        "Case 4": {"text": "Hi", "max_tokens": 100},
         "Case 5": {
             "text": " Hello World 3333 ",
             "model": "  GPT-4",
             "temperature": 1.5,
-            "max_tokens":12
+            "max_tokens": 12,
         },
     }
 

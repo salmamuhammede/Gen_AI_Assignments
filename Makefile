@@ -28,7 +28,7 @@ check: fix format
 assignment_1:
 	python -m src.assignment1_async_dataclass_pydantic.part_1
 	python -m src.assignment1_async_dataclass_pydantic.part_2
-
+    python -m src.assignment1_async_dataclass_pydantic.part_3
 # Remove Python cache files
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +

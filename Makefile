@@ -44,6 +44,8 @@ assignment_1:
 	python -m src.assignment2_fastapi.part_3.part_3_write
 
 	python -m src.assignment2_fastapi.part_5.part_5_write
+	
+	python -m src.assignment2_fastapi.part_6.part_6_final_integration
 
 
 # Remove Python cache files

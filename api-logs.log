@@ -1,1 +1,7 @@
 2026-08-15 01:20:55,959 - __main__ - INFO - Application Starting
+2026-08-21 14:43:44,931 - __main__ - INFO - ============================================================
+2026-08-21 14:43:44,931 - __main__ - INFO - Application Starting - Logging Enabled
+2026-08-21 14:43:44,931 - __main__ - INFO - ============================================================
+2026-08-21 14:45:12,897 - __main__ - INFO - Health check requested
+2026-08-21 14:45:14,190 - __main__ - INFO - Health check requested
+2026-08-21 14:45:22,785 - __main__ - INFO - Root endpoint accessed

@@ -46,7 +46,7 @@ Detail: "Invalid or missing Api Key..."
 The `APIKeyHeader` is configured with:
 
 ```python id="y2cb8r"
-auto_error=True
+auto_error = True
 ```
 
 This means FastAPI automatically raises an HTTP exception when the `X-API-KEY` header is missing, so `verify_api_key()` is not executed.
@@ -117,10 +117,7 @@ This makes the lookup consistent with the check:
 
 ```python
 if api_key.lower() not in VALID_API_KEYS:
-    raise HTTPException(
-        status_code=403,
-        detail="Invalid or missing Api Key..."
-    )
+    raise HTTPException(status_code=403, detail="Invalid or missing Api Key...")
 
 return VALID_API_KEYS[api_key.lower()]
 ```

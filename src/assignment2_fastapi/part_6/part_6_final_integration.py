@@ -224,7 +224,7 @@ async def summarize_text(text: str, max_length: int = 150) -> str:
 
 
 async def translate_text(text: str, source_language: str, target_language: str) -> str:
-    system_prompt = f"You are a translation assistant. Translate the following text concisley from source language {source_language} into target language {target_language} maintain the original meaning and tone."
+    system_prompt = f"You are a translation assistant. Translate the following text concisely from source language {source_language} into target language {target_language} maintain the original meaning and tone."
     return await call_openai_model(text, "gpt-3.5-turbo", 0.3, system_prompt)
 
 
@@ -288,13 +288,11 @@ async def summarize(
     Call AI model with input validation.
 
     The request will be automatically validated:
-    - Text length must be 1-5000 characters
-    - Model must be in whitelist
-    - Temperature must be 0.0-2.0
-    - test keys : dev-key-1/2/3
+    - Text length must be 50-10000 characters
+    - max_length must be between 50 and 500 words
     """
     logger.info(
-        f"Received Summarization request- Model {request.model}, text length {len(request.text)}"
+        f"Received Summarization request- Text {request.text}, Max text length {request.max_length}"
     )
     start_time = time.time()
     try:
@@ -324,17 +322,8 @@ async def summarize(
 async def translate(
     request: TranslateRequest, user_id: str = Depends(check_rate_limit)
 ):
-    """
-    Call AI model with input validation.
-
-    The request will be automatically validated:
-    - Text length must be 1-5000 characters
-    - Model must be in whitelist
-    - Temperature must be 0.0-2.0
-    - test keys : dev-key-1/2/3
-    """
     logger.info(
-        f"Received Prediction request- Model {request.model}, text length {len(request.text)}"
+        f"Received Translation request- Text {request.text} with Source language {request.source_language} and with Target language {request.target_language} "
     )
     start_time = time.time()
     try:

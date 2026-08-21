@@ -293,7 +293,7 @@ async def summarize(
     - test keys : dev-key-1/2/3
     """
     logger.info(
-        f"Received Summarization request- Model {request.model}, text length {len(request.text)}"
+        f"Received Summarization request- Text {request.text}, Max text length {request.max_length}"
     )
     start_time = time.time()
     try:
@@ -333,7 +333,7 @@ async def translate(
     - test keys : dev-key-1/2/3
     """
     logger.info(
-        f"Received Prediction request- Model {request.model}, text length {len(request.text)}"
+        f"Received Translation request- Text {request.text} with Source language {request.source_language} and with Target language {request.target_language} "
     )
     start_time = time.time()
     try:

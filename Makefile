@@ -43,6 +43,8 @@ assignment_1:
 
 	python -m src.assignment2_fastapi.part_3.part_3_write
 
+	python -m src.assignment2_fastapi.part_5.part_5_write
+
 
 # Remove Python cache files
 clean:
